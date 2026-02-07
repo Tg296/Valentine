@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: white;
+    }
+    h1 { font-size: 3em; }
+    p { font-size: 1.4em; max-width: 600px; margin: auto; }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 20px;
+    }
+    #yes { background-color: #ff4d6d; color: white; }
+    #no {
+      background-color: white;
+      color: #ff4d6d;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Hey Love 💕</h1>
+<p>
+  From the moment you came into my life, everything felt brighter.
+  I can’t imagine celebrating love without you.
+</p>
+
+<h1>Will you be my Valentine? 🌹</h1>
+
+<button id="yes" onclick="yesClicked()">YES 💖</button>
+<button id="no" onmouseover="moveNo()">NO 😢</button>
+
+<script>
+function yesClicked() {
+  document.body.innerHTML = `
+    <h1>YAYYY!! 💘</h1>
+    <p>
+      You just made me the happiest person alive.
+      I love you endlessly ❤️
+    </p>
+  `;
+}
+
+function moveNo() {
+  const btn = document.getElementById("no");
+  btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+  btn.style.top = Math.random() * (window.innerHeight - 100) + "px";
+}
+</script>
+
+</body>
+</html>
